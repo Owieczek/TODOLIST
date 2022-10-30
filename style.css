@@ -1,0 +1,172 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(22, 22, 22);
+  color: white;
+  min-height: 100vh;
+}
+
+.cont {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  width: 1200px;
+  min-height: 800px;
+}
+
+
+.edit {
+  color: aqua;
+  cursor: pointer;
+  text-align: center;
+}
+
+.delete {
+  color: red;
+  cursor: pointer;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  width: 100%;
+  gap: 2px;
+  margin-bottom: 3px;
+  n-items: center;
+}
+
+.taskName {
+  background: rgba(0, 0, 0, 0.147);
+  box-shadow: 0 1px 32px 0 rgba(24, 32, 117, 0.226);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+  font-size: 10px;
+  font-weight: normal;
+  margin: 3px;
+}
+
+.placeholder {
+  background: rgba(255, 255, 255, 0.076);
+  box-shadow: 0 4px 32px 0 rgba(31, 38, 135, 0.308);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  display: inline;
+  flex-grow: 1;
+  width: 100%;
+  height: 25px;
+}
+
+.input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+
+.formCont {
+  width: 100%;
+}
+#newTaskForm {
+    display: flex;
+    width: 100%;
+    gap:4px;
+  }
+
+  li > button{
+    padding: 0 12px 0 8px;
+  }
+  
+  .editing{
+    color: red;
+}
+
+
+h2{
+  text-align: left;
+  width: 100%;
+  margin: 40px 0 0 10px;
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 18px;
+  background: rgb(23, 38, 79);
+  color: white;
+  padding: 0.1em 2em;
+  padding-left: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
